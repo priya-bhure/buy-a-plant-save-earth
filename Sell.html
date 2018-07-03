@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sell</title>
+ <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+.topnav {
+  top:0;
+  width:100%;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  z-index:999;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+ 
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+<!--
+Style to add text on image
+-->
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.center-left {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    
+}
+
+
+<!--finished here-->
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password],input[type=number] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498DB;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+
+.container2 {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+<!--Login ends-->
+p.heading1 {
+    font-family: "Algerian";
+	font-size:70px;
+}
+
+p.heading2 {
+    font-family: "Bernard MT Condensed";
+	font-size:70px;
+	color:#FFF;
+}
+p.col{
+color:#FFF;
+}
+
+p.col2{
+    font-family: "Bernard MT Condensed";
+	font-size:30px;
+    color:#52BE80;
+}
+
+.parallax {
+    background-image: url("secpageplant1.jpg");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    background-image: url("plant3.jpg");
+
+    min-height: 500px; 
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+<!-- Card View starts from here -->
+
+.container3 {
+    padding: 2px 16px;
+}
+
+.outlines{
+border: 2px solid black;
+}
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  width:100px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+</style>
+</head>
+<body oncontextmenu="return false">
+
+<!--
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+-->
+<div class="topnav">
+  <a href="Home.html">Home</a>
+  <a href="ListPlant.php">Plants Available</a>
+  <a class="active" href="">Sell</a>
+  <a href="Plantinfo.php" align="right">Information desk</a>
+  <a href="Logout.php">Logout</a>
+  <a href="Cart.php">Order History</a>
+  
+</div>
+
+
+<!--
+<div class="parallax">
+<div class="container">
+<div class="centered"><p class="heading2" color="#12686F">
+<b>Adopt a plant</p>
+<p><h4><font color="#FFF">"A tree is known by its fruit , a man by his deeds. A good deed is never lost ,
+ he who sows courtesy reaps friendship, and he who plants kindness gathers love."
+ </font></h4></p>
+<br>
+<br>
+<br><br>
+</p>
+<br>
+</div>
+</div>
+</div>
+-->
+<!--image finished,,,, Starting content-->
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+<br>
+<h2 style="text-align:center"> <font color="#52BE80"><p class="col2"> Sell From Here</p> </font></h2>   
+  
+
+ <form method="post" action="sellit.php" enctype="multipart/form-data"><!--PHP code-->
+   <input type="hidden" name="size" value="1000000">
+    <div class="container2">
+    <label><b>Plant name</b></label><br>
+    <input type="text" placeholder="Enter Name" name="pname" maxlength="30" required>
+    <br>
+    <label><b>Price </b></label><br>
+    <input type="Number" placeholder="Enter Price" max="50000" name="pprice" required>
+    <br>
+    <label><b>Description </b></label><br>
+    <input type="text" placeholder="Enter Description" name="pdesc" required>
+    <br>
+    
+    <label><b>Upload Image</b></label><br>  
+	<input type="file" name="image" required>
+    </div>
+    <button type="submit" name="upload" style="margin-left:15px" value="upload image">Sell</button>
+   
+  
+ <!--
+  <div class="container2" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+  -->
+</form>
+
+
+
+ <a name="contactus"></a>
+ 
+
+  <div style="background:#000;min-height:100px;text-align:center">
+ 
+  <h6><font color="#FFF"><br>
+  Contact Number: 98989898989<br>
+  Email id:adoptaplant@gmail.com<br>
+  Address:Sir Mvit , Bangalore <br>
+  <br>
+  Created by Prabhat And Priya . All Rights Reserved.
+  <br>
+  <br>
+  <br>
+  </div>
+  
+  
+  
+  
+  
+
+</body>
+</html>
